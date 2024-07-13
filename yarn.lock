@@ -4863,7 +4863,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.5.1":
+"axios@npm:^1.5.1, axios@npm:^1.7.2":
   version: 1.7.2
   resolution: "axios@npm:1.7.2"
   dependencies:
@@ -13084,6 +13084,7 @@ __metadata:
   resolution: "se-2@workspace:."
   dependencies:
     "@chainlink/contracts": ^1.1.1
+    axios: ^1.7.2
     husky: ~8.0.3
     lint-staged: ~13.2.2
   languageName: unknown
