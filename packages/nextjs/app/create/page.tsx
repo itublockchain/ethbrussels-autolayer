@@ -4,20 +4,25 @@ import { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 import type { NextPage } from "next";
-import { useAccount } from "wagmi";
+import { useAccount, useSignMessage, useConnectors } from "wagmi";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 
 const CreateOrder: NextPage = () => {
+  const connector = useConnectors();
   const { address: connectedAddress } = useAccount();
+  const signMessage = useSignMessage();
   const [address1, setAddress1] = useState("");
   const [address2, setAddress2] = useState("");
   const [contractAddress, setContractAddress] = useState("");
   const [amount, setAmount] = useState("");
+  const [condition, setCondition] = useState("");
+  const [conditionAmount, setConditionAmount] = useState("");
   const [selectedOption, setSelectedOption] = useState("multi-address-contract-execution");
 
   const handleSubmit = async () => {
     const order = {
+      conditionAmount,
       selectedOption,
       address1,
       address2,
@@ -100,8 +105,22 @@ stablecoin when the original stablecoin loses its peg (specified ratio). This en
                 onChange={e => setContractAddress(e.target.value)}
               />
             </div>
+              <label className="block text-gray-700 mb-2">Condition:</label>
+            <div className="mb-4 flex">
+              <input
+                type="text"
+                className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring focus:border-blue-300 bg-white text-black"
+                placeholder="Amount"
+                value={conditionAmount}
+                onChange={e => setConditionAmount(e.target.value)}
+              />
+              <select onChange={(e) => setCondition(e.currentTarget.value)} className="w-1/2 px-4 py-2 border rounded-full focus:outline-none focus:ring focus:border-blue-300 bg-white text-black">
+                <option value={"sell"}>Sell</option>
+                <option value={"buy"}>Buy</option>
+              </select>
+            </div>
             <div className="mb-4">
-              <label className="block text-gray-700 mb-2">Do:</label>
+              <label className="block text-gray-700 mb-2">Action:</label>
               <div className="flex items-center">
                 <select className="px-4 py-2 border rounded-full focus:outline-none focus:ring focus:border-blue-300 text-gray-400 bg-white">
                   <option value="transfer">Transfer</option>

@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
+import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
   const [orders, setOrders] = useState([]);
+  const { writeContractAsync: mockSwapCall } = useScaffoldWriteContract("Automation");
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -40,19 +42,29 @@ const Home: NextPage = () => {
                 <div
                   className={`w-8 h-8 rounded-full ${order.address1 === "done" ? "bg-green-200" : order.status === "canceled" ? "bg-red-200" : "bg-blue-200"}`}
                 ></div>
-                <div className="text-lg font-semibold">{order.type === "multi-address-contract-execution" ? "Multi-Address Contract Execution" : "Peg Loss Protection"}</div>
+                <div className="text-lg font-semibold">
+                  {order.selectedOption === "multi-address-contract-execution"
+                    ? "Multi-Address Contract Execution"
+                    : "Peg Loss Protection"}
+                </div>
               </div>
             </div>
             <div className="flex justify-between gap-2">
               <div>
                 <div className="flex flex-col gap-2">
                   <div className="text-gray-500">Addresses:</div>
-                  <div className="bg-white p-2 rounded-full w-96 border-blue-400 border-2 text-black">{order.address1}</div>
-                  <div className="bg-white p-2 rounded-full w-96 border-blue-400 border-2 text-black">{order.address2}</div>
+                  <div className="bg-white p-2 rounded-full w-96 border-blue-400 border-2 text-black">
+                    {order.address1}
+                  </div>
+                  <div className="bg-white p-2 rounded-full w-96 border-blue-400 border-2 text-black">
+                    {order.address2}
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="text-gray-500">Contract Address:</div>
-                  <div className="bg-white p-2 rounded-full w-96 border-blue-400 border-2 text-black">{order.contractAddress}</div>
+                  <div className="bg-white p-2 rounded-full w-96 border-blue-400 border-2 text-black">
+                    {order.contractAddress}
+                  </div>
                 </div>
               </div>
 
@@ -64,8 +76,14 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
+            <button
+        className="w-32 h-16 bg-blue-500 rounded-2xl text-white shadow-xl hover:bg-blue-600"
+        onClick={async () => await mockSwapCall({ functionName: "setCondition", args: [true] })}
+      >Perform Simulation</button>
           </div>
+          
         ))}
+        
       </div>
     </div>
   );
