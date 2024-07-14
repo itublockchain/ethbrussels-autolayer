@@ -1,0 +1,314 @@
+{
+  "address": "0x97570D2ED715c5d29Db6C626E829496f8Ff48c8b",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "BuyToken",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Mint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "SellToken",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "buyToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "ethBalances",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "getTokenBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "sellToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "setEthBalance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "setTokenBalance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "tokenBalances",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "users",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x22b0354557e88ce47455422607b001da843e44e6ce819941d493620020f37a45",
+  "receipt": {
+    "to": null,
+    "from": "0xB1162d1645f74AdC69f9C9A43F3F403738480d59",
+    "contractAddress": "0x97570D2ED715c5d29Db6C626E829496f8Ff48c8b",
+    "transactionIndex": 6,
+    "gasUsed": "310047",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xbab1e7da26d916b7dec0136af670eef611e40adb671a03aaedae299c9b106ee7",
+    "transactionHash": "0x22b0354557e88ce47455422607b001da843e44e6ce819941d493620020f37a45",
+    "logs": [],
+    "blockNumber": 12581162,
+    "cumulativeGasUsed": "6618486",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "19f0125da19fa4bee9885c512cdb3106",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"BuyToken\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Mint\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"SellToken\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"buyToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"ethBalances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getTokenBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"sellToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"setEthBalance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"setTokenBalance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"tokenBalances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"users\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/MockSwap.sol\":\"MockSwap\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/MockSwap.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.19;\\n\\ncontract MockSwap {\\n\\tevent SellToken(address indexed user, uint256 amount);\\n\\tevent Mint(address indexed user, uint256 amount);\\n\\tevent BuyToken(address indexed user, uint256 amount);\\n\\n\\tmapping(address => uint256) public ethBalances;\\n\\tmapping(address => uint256) public tokenBalances;\\n\\taddress[] public users;\\n\\n\\tfunction setEthBalance(address user, uint256 amount) external {\\n\\t\\tethBalances[user] = amount;\\n\\t}\\n\\n\\tfunction setTokenBalance(address user, uint256 amount) external {\\n\\t\\ttokenBalances[user] = amount;\\n\\t}\\n\\n\\tfunction sellToken(address user, uint256 amount) external {\\n        require(tokenBalances[user] >= amount, \\\"Insufficient token balance\\\");\\n\\t\\ttokenBalances[user] -= amount;\\n\\t\\tethBalances[user] += amount;\\n\\n\\t\\temit SellToken(user, amount);\\n\\t}\\n\\n\\tfunction buyToken(address user, uint256 amount) external {\\n\\t\\tethBalances[user] -= amount;\\n\\t\\ttokenBalances[user] += amount; // Mint back the tokens\\n\\t\\temit BuyToken(user, amount);\\n\\t}\\n\\n\\tfunction getBalance(address user) external view returns (uint256) {\\n\\t\\treturn ethBalances[user];\\n\\t}\\n\\n\\tfunction getTokenBalance(address user) external view returns (uint256) {\\n\\t\\treturn tokenBalances[user];\\n\\t}\\n\\n\\t// function resetBalances() external {\\n\\t// \\t// Only for demonstration purposes; in a real scenario, proper access control is needed.\\n\\t// \\tfor (uint256 i = 0; i < users.length; i++) {\\n\\t// \\t\\tethBalances[users[i]] = 0;\\n\\t// \\t\\ttokenBalances[users[i]] = 0;\\n\\t// \\t}\\n\\t// \\tdelete users;\\n\\t// }\\n}\\n\",\"keccak256\":\"0x021d4a3a17f02c180eca09b1828db752a0f35748c2ada9fac45a38b8b9465885\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506104a5806100206000396000f3fe608060405234801561001057600080fd5b50600436106100935760003560e01c8063523fba7f11610066578063523fba7f1461014b57806368f8fc101461016b578063ec5591761461017e578063f464e7db146101a8578063f8b2cb4f146101bb57600080fd5b8063365b98b2146100985780633aecd0e3146100c85780633cfba0e3146100ff5780634ceb1f131461011f575b600080fd5b6100ab6100a63660046103ac565b6101e4565b6040516001600160a01b0390911681526020015b60405180910390f35b6100f16100d63660046103e1565b6001600160a01b031660009081526001602052604090205490565b6040519081526020016100bf565b6100f161010d3660046103e1565b60006020819052908152604090205481565b61014961012d366004610403565b6001600160a01b03909116600090815260016020526040902055565b005b6100f16101593660046103e1565b60016020526000908152604090205481565b610149610179366004610403565b61020e565b61014961018c366004610403565b6001600160a01b03909116600090815260208190526040902055565b6101496101b6366004610403565b6102ab565b6100f16101c93660046103e1565b6001600160a01b031660009081526020819052604090205490565b600281815481106101f457600080fd5b6000918252602090912001546001600160a01b0316905081565b6001600160a01b03821660009081526020819052604081208054839290610236908490610443565b90915550506001600160a01b0382166000908152600160205260408120805483929061026390849061045c565b90915550506040518181526001600160a01b038316907fdd06b66c3ba8126086cd863137d6f3b86ce5bcf4309cac390cc265e39194d0b2906020015b60405180910390a25050565b6001600160a01b0382166000908152600160205260409020548111156103175760405162461bcd60e51b815260206004820152601a60248201527f496e73756666696369656e7420746f6b656e2062616c616e6365000000000000604482015260640160405180910390fd5b6001600160a01b0382166000908152600160205260408120805483929061033f908490610443565b90915550506001600160a01b0382166000908152602081905260408120805483929061036c90849061045c565b90915550506040518181526001600160a01b038316907ff567b51b9deaa2fa38dd169801137cdc7532865d1e82192be079971d61e3ce869060200161029f565b6000602082840312156103be57600080fd5b5035919050565b80356001600160a01b03811681146103dc57600080fd5b919050565b6000602082840312156103f357600080fd5b6103fc826103c5565b9392505050565b6000806040838503121561041657600080fd5b61041f836103c5565b946020939093013593505050565b634e487b7160e01b600052601160045260246000fd5b818103818111156104565761045661042d565b92915050565b808201808211156104565761045661042d56fea26469706673582212202637e5a1d2321a55d4a7363455c4cd1c95a545e0de52b766ee9163ff2e6a61f164736f6c63430008130033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100935760003560e01c8063523fba7f11610066578063523fba7f1461014b57806368f8fc101461016b578063ec5591761461017e578063f464e7db146101a8578063f8b2cb4f146101bb57600080fd5b8063365b98b2146100985780633aecd0e3146100c85780633cfba0e3146100ff5780634ceb1f131461011f575b600080fd5b6100ab6100a63660046103ac565b6101e4565b6040516001600160a01b0390911681526020015b60405180910390f35b6100f16100d63660046103e1565b6001600160a01b031660009081526001602052604090205490565b6040519081526020016100bf565b6100f161010d3660046103e1565b60006020819052908152604090205481565b61014961012d366004610403565b6001600160a01b03909116600090815260016020526040902055565b005b6100f16101593660046103e1565b60016020526000908152604090205481565b610149610179366004610403565b61020e565b61014961018c366004610403565b6001600160a01b03909116600090815260208190526040902055565b6101496101b6366004610403565b6102ab565b6100f16101c93660046103e1565b6001600160a01b031660009081526020819052604090205490565b600281815481106101f457600080fd5b6000918252602090912001546001600160a01b0316905081565b6001600160a01b03821660009081526020819052604081208054839290610236908490610443565b90915550506001600160a01b0382166000908152600160205260408120805483929061026390849061045c565b90915550506040518181526001600160a01b038316907fdd06b66c3ba8126086cd863137d6f3b86ce5bcf4309cac390cc265e39194d0b2906020015b60405180910390a25050565b6001600160a01b0382166000908152600160205260409020548111156103175760405162461bcd60e51b815260206004820152601a60248201527f496e73756666696369656e7420746f6b656e2062616c616e6365000000000000604482015260640160405180910390fd5b6001600160a01b0382166000908152600160205260408120805483929061033f908490610443565b90915550506001600160a01b0382166000908152602081905260408120805483929061036c90849061045c565b90915550506040518181526001600160a01b038316907ff567b51b9deaa2fa38dd169801137cdc7532865d1e82192be079971d61e3ce869060200161029f565b6000602082840312156103be57600080fd5b5035919050565b80356001600160a01b03811681146103dc57600080fd5b919050565b6000602082840312156103f357600080fd5b6103fc826103c5565b9392505050565b6000806040838503121561041657600080fd5b61041f836103c5565b946020939093013593505050565b634e487b7160e01b600052601160045260246000fd5b818103818111156104565761045661042d565b92915050565b808201808211156104565761045661042d56fea26469706673582212202637e5a1d2321a55d4a7363455c4cd1c95a545e0de52b766ee9163ff2e6a61f164736f6c63430008130033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 243,
+        "contract": "contracts/MockSwap.sol:MockSwap",
+        "label": "ethBalances",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 247,
+        "contract": "contracts/MockSwap.sol:MockSwap",
+        "label": "tokenBalances",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 250,
+        "contract": "contracts/MockSwap.sol:MockSwap",
+        "label": "users",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_array(t_address)dyn_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

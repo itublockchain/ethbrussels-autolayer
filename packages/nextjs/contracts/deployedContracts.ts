@@ -6,9 +6,209 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   84532: {
-    MockSwap: {
-      address: "0xe0418e12572218B96c8E93a0B7AF770D2DA32037",
+    Automation: {
+      address: "0x2d1Badab9ef2aedC985c591dE184eE0c8d91d927",
       abi: [
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "_swapContractAddress",
+              type: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "address",
+              name: "user",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+          ],
+          name: "TokensSwapped",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes",
+              name: "",
+              type: "bytes",
+            },
+          ],
+          name: "checkUpkeep",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "upkeepNeeded",
+              type: "bool",
+            },
+            {
+              internalType: "bytes",
+              name: "",
+              type: "bytes",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "condition",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes",
+              name: "",
+              type: "bytes",
+            },
+          ],
+          name: "performUpkeep",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "reset",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bool",
+              name: "value",
+              type: "bool",
+            },
+          ],
+          name: "setCondition",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "_user",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "_swapAmount",
+              type: "uint256",
+            },
+          ],
+          name: "setUser",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "swapAmount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "swapContractAddress",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "user",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {
+        checkUpkeep:
+          "@chainlink/contracts/src/v0.8/automation/interfaces/AutomationCompatibleInterface.sol",
+        performUpkeep:
+          "@chainlink/contracts/src/v0.8/automation/interfaces/AutomationCompatibleInterface.sol",
+      },
+    },
+    MockSwap: {
+      address: "0x97570D2ED715c5d29Db6C626E829496f8Ff48c8b",
+      abi: [
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "user",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+          ],
+          name: "BuyToken",
+          type: "event",
+        },
         {
           anonymous: false,
           inputs: [
@@ -44,27 +244,26 @@ const deployedContracts = {
               type: "uint256",
             },
           ],
-          name: "ReverseSwap",
+          name: "SellToken",
           type: "event",
         },
         {
-          anonymous: false,
           inputs: [
             {
-              indexed: true,
               internalType: "address",
               name: "user",
               type: "address",
             },
             {
-              indexed: false,
               internalType: "uint256",
               name: "amount",
               type: "uint256",
             },
           ],
-          name: "Swap",
-          type: "event",
+          name: "buyToken",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
         },
         {
           inputs: [
@@ -74,7 +273,7 @@ const deployedContracts = {
               type: "address",
             },
           ],
-          name: "balances",
+          name: "ethBalances",
           outputs: [
             {
               internalType: "uint256",
@@ -83,13 +282,6 @@ const deployedContracts = {
             },
           ],
           stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "deposit",
-          outputs: [],
-          stateMutability: "payable",
           type: "function",
         },
         {
@@ -131,8 +323,19 @@ const deployedContracts = {
           type: "function",
         },
         {
-          inputs: [],
-          name: "resetBalances",
+          inputs: [
+            {
+              internalType: "address",
+              name: "user",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+          ],
+          name: "sellToken",
           outputs: [],
           stateMutability: "nonpayable",
           type: "function",
@@ -140,12 +343,17 @@ const deployedContracts = {
         {
           inputs: [
             {
+              internalType: "address",
+              name: "user",
+              type: "address",
+            },
+            {
               internalType: "uint256",
               name: "amount",
               type: "uint256",
             },
           ],
-          name: "reverseSwap",
+          name: "setEthBalance",
           outputs: [],
           stateMutability: "nonpayable",
           type: "function",
@@ -153,12 +361,17 @@ const deployedContracts = {
         {
           inputs: [
             {
+              internalType: "address",
+              name: "user",
+              type: "address",
+            },
+            {
               internalType: "uint256",
               name: "amount",
               type: "uint256",
             },
           ],
-          name: "swap",
+          name: "setTokenBalance",
           outputs: [],
           stateMutability: "nonpayable",
           type: "function",
