@@ -23,9 +23,8 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div className="flex justify-start items-center w-full h-screen flex-col gap-6 p-4 bg-gray-200">
-      <div className="w-full max-w-6xl bg-white p-4 rounded shadow-md flex gap-2">
-        <button className="bg-blue-200 text-blue-600 p-2 rounded-full">+</button>
+    <div className="flex justify-start items-center w-full flex-col gap-6 p-4 bg-gray-200">
+      <div className="w-full max-w-6xl p-4 rounded flex gap-2">
         <div className="flex gap-4">
           <button className="text-gray-600">All</button>
           <button className="text-gray-600">In process</button>
@@ -35,13 +34,13 @@ const Home: NextPage = () => {
       </div>
       <div className="w-full max-w-6xl flex flex-col gap-4">
         {orders.map((order, index) => (
-          <div key={index} className="bg-white shadow-md p-4 rounded-3xl flex flex-col gap-4 justify-center">
+          <div key={index} className="bg-white shadow-md p-4 rounded-3xl flex flex-col gap-4 justify-center pr-16">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <div
                   className={`w-8 h-8 rounded-full ${order.address1 === "done" ? "bg-green-200" : order.status === "canceled" ? "bg-red-200" : "bg-blue-200"}`}
                 ></div>
-                <div className="text-lg font-semibold">Multi-Address Contract Execution</div>
+                <div className="text-lg font-semibold">{order.type === "multi-address-contract-execution" ? "Multi-Address Contract Execution" : "Peg Loss Protection"}</div>
               </div>
             </div>
             <div className="flex justify-between gap-2">
@@ -58,10 +57,6 @@ const Home: NextPage = () => {
               </div>
 
               <div className="flex gap-4 items-center">
-                <div className="flex gap-2">
-                  <div className="text-gray-500">{order.address1}</div>
-                  <div className="text-gray-500">{order.address1}</div>
-                </div>
                 <div className="text-gray-500">=</div>
                 <div className="flex items-center gap-2">
                   <div className="text-gray-500">Transfer:</div>
