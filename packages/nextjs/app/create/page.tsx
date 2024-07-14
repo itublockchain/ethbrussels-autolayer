@@ -155,7 +155,7 @@ stablecoin when the original stablecoin loses its peg (specified ratio). This en
               <label className="block text-gray-700 mb-2">Do:</label>
               <div className="flex items-center">
                 <select className="px-4 py-2 border rounded-full focus:outline-none focus:ring focus:border-blue-300 text-gray-400 bg-white">
-                  <option value="transfer">Transfer</option>
+                  <option value="swap">Swap</option>
                   {/* Add more options as needed */}
                 </select>
                 <input
