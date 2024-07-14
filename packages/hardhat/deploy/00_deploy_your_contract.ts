@@ -35,17 +35,25 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const mockSwap = await hre.ethers.getContract<Contract>("MockSwap", deployer);
   const mockSwapAddress = await mockSwap.getAddress();
 
+  console.log(
+    "👋 first address funded:",
+    await mockSwap.setTokenBalance("0x0177f3a60495B1c55fa0440929C458f5064886c7", BigInt(10 * 10 ** 18)),
+  );
+  console.log(
+    "👋 second address funded:",
+    await mockSwap.setTokenBalance("0x2Af3E6F7AdB774eEC4EAd62B29FEBAF2929504e2", BigInt(10 * 10 ** 18)),
+  );
+  console.log("👋 deployer address funded:", await mockSwap.setTokenBalance(deployer, BigInt(10 ** 18)));
 
   await deploy("Automation", {
     from: deployer,
     // Contract constructor arguments
-    args:[mockSwapAddress],
+    args: [mockSwapAddress],
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.
     autoMine: true,
   });
-
 };
 
 export default deployYourContract;
