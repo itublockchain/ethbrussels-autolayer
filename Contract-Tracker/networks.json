@@ -1,8 +1,0 @@
-{
-  "base-sepolia": {
-    "MockSwap": {
-      "address": "0xe0418e12572218B96c8E93a0B7AF770D2DA32037",
-      "startBlock": 12565408
-    }
-  }
-}
