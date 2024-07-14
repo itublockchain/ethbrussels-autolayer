@@ -32,6 +32,19 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   });
 
   // Get the deployed contract to interact with it after deploying.
+  const mockSwap = await hre.ethers.getContract<Contract>("MockSwap", deployer);
+  const mockSwapAddress = await mockSwap.getAddress();
+
+
+  await deploy("Automation", {
+    from: deployer,
+    // Contract constructor arguments
+    args:[mockSwapAddress],
+    log: true,
+    // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
+    // automatically mining the contract deployment transaction. There is no effect on live networks.
+    autoMine: true,
+  });
 
 };
 

@@ -1,6 +1,6 @@
 import { wagmiConnectors } from "./wagmiConnectors";
 import { Chain, createClient, http } from "viem";
-import { hardhat, mainnet } from "viem/chains";
+import { baseSepolia, hardhat, mainnet } from "viem/chains";
 import { createConfig } from "wagmi";
 import scaffoldConfig from "~~/scaffold.config";
 import { getAlchemyHttpUrl } from "~~/utils/scaffold-eth";
@@ -13,7 +13,7 @@ export const enabledChains = targetNetworks.find((network: Chain) => network.id 
   : ([...targetNetworks, mainnet] as const);
 
 export const wagmiConfig = createConfig({
-  chains: enabledChains,
+  chains: [baseSepolia],
   connectors: wagmiConnectors,
   ssr: true,
   client({ chain }) {

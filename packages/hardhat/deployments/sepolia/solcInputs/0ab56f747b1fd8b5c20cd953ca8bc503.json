@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/MockSwap.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.19;\n\ncontract MockSwap {\n    event Swap(address indexed user, uint256 amount);\n    event Mint(address indexed user, uint256 amount);\n    event ReverseSwap(address indexed user, uint256 amount);\n\n    mapping(address => uint256) public balances;\n    mapping(address => uint256) public tokenBalances;\n    address[] public users;\n\n    function deposit() external payable {\n        if (balances[msg.sender] == 0 && tokenBalances[msg.sender] == 0) {\n            users.push(msg.sender);\n        }\n        balances[msg.sender] += msg.value;\n        tokenBalances[msg.sender] += msg.value; // 1:1 ratio for simplicity\n        emit Mint(msg.sender, msg.value);\n    }\n\n    function swap(uint256 amount) external {\n        require(tokenBalances[msg.sender] >= amount, \"Insufficient token balance\");\n        tokenBalances[msg.sender] -= amount;\n        emit Swap(msg.sender, amount);\n    }\n\n    function reverseSwap(uint256 amount) external {\n        require(balances[msg.sender] >= amount, \"Insufficient ether balance\");\n        balances[msg.sender] -= amount;\n        tokenBalances[msg.sender] += amount; // Mint back the tokens\n        payable(msg.sender).transfer(amount);\n        emit ReverseSwap(msg.sender, amount);\n    }\n\n    function getBalance(address user) external view returns (uint256) {\n        return balances[user];\n    }\n\n    function getTokenBalance(address user) external view returns (uint256) {\n        return tokenBalances[user];\n    }\n\n    function resetBalances() external {\n        // Only for demonstration purposes; in a real scenario, proper access control is needed.\n        for (uint256 i = 0; i < users.length; i++) {\n            balances[users[i]] = 0;\n            tokenBalances[users[i]] = 0;\n        }\n        delete users;\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

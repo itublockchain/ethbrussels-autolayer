@@ -2,51 +2,50 @@
 pragma solidity 0.8.19;
 
 contract MockSwap {
-    event Swap(address indexed user, uint256 amount);
-    event Mint(address indexed user, uint256 amount);
-    event ReverseSwap(address indexed user, uint256 amount);
+	event SellToken(address indexed user, uint256 amount);
+	event Mint(address indexed user, uint256 amount);
+	event BuyToken(address indexed user, uint256 amount);
 
-    mapping(address => uint256) public balances;
-    mapping(address => uint256) public tokenBalances;
-    address[] public users;
+	mapping(address => uint256) public ethBalances;
+	mapping(address => uint256) public tokenBalances;
+	address[] public users;
 
-    function deposit() external payable {
-        if (balances[msg.sender] == 0 && tokenBalances[msg.sender] == 0) {
-            users.push(msg.sender);
-        }
-        balances[msg.sender] += msg.value;
-        tokenBalances[msg.sender] += msg.value; // 1:1 ratio for simplicity
-        emit Mint(msg.sender, msg.value);
-    }
+	function setEthBalance(address user, uint256 amount) external {
+		ethBalances[user] = amount;
+	}
 
-    function swap(uint256 amount) external {
-        require(tokenBalances[msg.sender] >= amount, "Insufficient token balance");
-        tokenBalances[msg.sender] -= amount;
-        emit Swap(msg.sender, amount);
-    }
+	function setTokenBalance(address user, uint256 amount) external {
+		tokenBalances[user] = amount;
+	}
 
-    function reverseSwap(uint256 amount) external {
-        require(balances[msg.sender] >= amount, "Insufficient ether balance");
-        balances[msg.sender] -= amount;
-        tokenBalances[msg.sender] += amount; // Mint back the tokens
-        payable(msg.sender).transfer(amount);
-        emit ReverseSwap(msg.sender, amount);
-    }
+	function sellToken(address user, uint256 amount) external {
+        require(tokenBalances[user] >= amount, "Insufficient token balance");
+		tokenBalances[user] -= amount;
+		ethBalances[user] += amount;
 
-    function getBalance(address user) external view returns (uint256) {
-        return balances[user];
-    }
+		emit SellToken(user, amount);
+	}
 
-    function getTokenBalance(address user) external view returns (uint256) {
-        return tokenBalances[user];
-    }
+	function buyToken(address user, uint256 amount) external {
+		ethBalances[user] -= amount;
+		tokenBalances[user] += amount; // Mint back the tokens
+		emit BuyToken(user, amount);
+	}
 
-    function resetBalances() external {
-        // Only for demonstration purposes; in a real scenario, proper access control is needed.
-        for (uint256 i = 0; i < users.length; i++) {
-            balances[users[i]] = 0;
-            tokenBalances[users[i]] = 0;
-        }
-        delete users;
-    }
+	function getBalance(address user) external view returns (uint256) {
+		return ethBalances[user];
+	}
+
+	function getTokenBalance(address user) external view returns (uint256) {
+		return tokenBalances[user];
+	}
+
+	// function resetBalances() external {
+	// 	// Only for demonstration purposes; in a real scenario, proper access control is needed.
+	// 	for (uint256 i = 0; i < users.length; i++) {
+	// 		ethBalances[users[i]] = 0;
+	// 		tokenBalances[users[i]] = 0;
+	// 	}
+	// 	delete users;
+	// }
 }

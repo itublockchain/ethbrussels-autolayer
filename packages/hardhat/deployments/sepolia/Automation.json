@@ -1,0 +1,292 @@
+{
+  "address": "0x207f2fc4d4c3B42Ec1d11A2f4D04d8909Ef38F68",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_swapContractAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "TokensSwapped",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "swapAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "addUser",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "checkUpkeep",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "upkeepNeeded",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "condition",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "performUpkeep",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "reset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "value",
+          "type": "bool"
+        }
+      ],
+      "name": "setCondition",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "swapAmounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "swapContractAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "users",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x5b1dbe7f331e46f827e6307f8ff1627e14ea88510d81fe7adf40bff2e9a175dd",
+  "receipt": {
+    "to": null,
+    "from": "0xB1162d1645f74AdC69f9C9A43F3F403738480d59",
+    "contractAddress": "0x207f2fc4d4c3B42Ec1d11A2f4D04d8909Ef38F68",
+    "transactionIndex": 17,
+    "gasUsed": "495073",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x6d34ad2d1536f00d58d33064eb2de0290b5eaa6108d4c45e805c4e2c7d700eef",
+    "transactionHash": "0x5b1dbe7f331e46f827e6307f8ff1627e14ea88510d81fe7adf40bff2e9a175dd",
+    "logs": [],
+    "blockNumber": 6305161,
+    "cumulativeGasUsed": "4772827",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xFA50216e848B4Ab80aB6E8c5Aeb9b313619759aC"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "aa915ecd6a91586c5e4949862c985669",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_swapContractAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"TokensSwapped\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"swapAmount\",\"type\":\"uint256\"}],\"name\":\"addUser\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"checkUpkeep\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"upkeepNeeded\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"condition\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"performUpkeep\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"reset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"value\",\"type\":\"bool\"}],\"name\":\"setCondition\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"swapAmounts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"swapContractAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"users\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Automation.sol\":\"Automation\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.8/automation/AutomationBase.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ncontract AutomationBase {\\n  error OnlySimulatedBackend();\\n\\n  /**\\n   * @notice method that allows it to be simulated via eth_call by checking that\\n   * the sender is the zero address.\\n   */\\n  function _preventExecution() internal view {\\n    // solhint-disable-next-line avoid-tx-origin\\n    if (tx.origin != address(0) && tx.origin != address(0x1111111111111111111111111111111111111111)) {\\n      revert OnlySimulatedBackend();\\n    }\\n  }\\n\\n  /**\\n   * @notice modifier that allows it to be simulated via eth_call by checking\\n   * that the sender is the zero address.\\n   */\\n  modifier cannotExecute() {\\n    _preventExecution();\\n    _;\\n  }\\n}\\n\",\"keccak256\":\"0x8c97744adc25cf30d1a2509bff6c0ddc9b36feb75f8e38c85d5c62b8ec773159\",\"license\":\"MIT\"},\"@chainlink/contracts/src/v0.8/automation/AutomationCompatible.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport {AutomationBase} from \\\"./AutomationBase.sol\\\";\\nimport {AutomationCompatibleInterface} from \\\"./interfaces/AutomationCompatibleInterface.sol\\\";\\n\\nabstract contract AutomationCompatible is AutomationBase, AutomationCompatibleInterface {}\\n\",\"keccak256\":\"0xce623f3e7fa4addf240032d2817b2b489ac08e79fae14a5cc5850ed3f1acddf8\",\"license\":\"MIT\"},\"@chainlink/contracts/src/v0.8/automation/interfaces/AutomationCompatibleInterface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\n// solhint-disable-next-line interface-starts-with-i\\ninterface AutomationCompatibleInterface {\\n  /**\\n   * @notice method that is simulated by the keepers to see if any work actually\\n   * needs to be performed. This method does does not actually need to be\\n   * executable, and since it is only ever simulated it can consume lots of gas.\\n   * @dev To ensure that it is never called, you may want to add the\\n   * cannotExecute modifier from KeeperBase to your implementation of this\\n   * method.\\n   * @param checkData specified in the upkeep registration so it is always the\\n   * same for a registered upkeep. This can easily be broken down into specific\\n   * arguments using `abi.decode`, so multiple upkeeps can be registered on the\\n   * same contract and easily differentiated by the contract.\\n   * @return upkeepNeeded boolean to indicate whether the keeper should call\\n   * performUpkeep or not.\\n   * @return performData bytes that the keeper should call performUpkeep with, if\\n   * upkeep is needed. If you would like to encode data to decode later, try\\n   * `abi.encode`.\\n   */\\n  function checkUpkeep(bytes calldata checkData) external returns (bool upkeepNeeded, bytes memory performData);\\n\\n  /**\\n   * @notice method that is actually executed by the keepers, via the registry.\\n   * The data returned by the checkUpkeep simulation will be passed into\\n   * this method to actually be executed.\\n   * @dev The input to this method should not be trusted, and the caller of the\\n   * method should not even be restricted to any single registry. Anyone should\\n   * be able call it, and the input should be validated, there is no guarantee\\n   * that the data passed in is the performData returned from checkUpkeep. This\\n   * could happen due to malicious keepers, racing keepers, or simply a state\\n   * change while the performUpkeep transaction is waiting for confirmation.\\n   * Always validate the data passed in.\\n   * @param performData is the data which was passed back from the checkData\\n   * simulation. If it is encoded, it can easily be decoded into other types by\\n   * calling `abi.decode`. This data should not be trusted, and should be\\n   * validated against the contract's current state.\\n   */\\n  function performUpkeep(bytes calldata performData) external;\\n}\\n\",\"keccak256\":\"0xf504b227c442cd4ed31b336b7bd15cfcb23220c84c26e750975c7e7d959125aa\",\"license\":\"MIT\"},\"contracts/Automation.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.19;\\n\\nimport {AutomationCompatibleInterface} from \\\"@chainlink/contracts/src/v0.8/automation/AutomationCompatible.sol\\\";\\n\\ncontract Automation is AutomationCompatibleInterface {\\n    mapping(address => bool) public condition;\\n    mapping(address => uint256) public swapAmounts;\\n    address[] public users;\\n\\n    address public swapContractAddress;\\n\\n    event TokensSwapped(address user, uint256 amount);\\n\\n    constructor(address _swapContractAddress) {\\n        swapContractAddress = _swapContractAddress;\\n    }\\n\\n    function addUser(address user, uint256 swapAmount) external {\\n        if (swapAmounts[user] == 0) {\\n            users.push(user);\\n        }\\n        swapAmounts[user] = swapAmount;\\n    }\\n\\n    function setCondition(address user, bool value) external {\\n        condition[user] = value;\\n    }\\n\\n    function checkUpkeep(\\n        bytes calldata /* checkData */\\n    ) external view override returns (bool upkeepNeeded, bytes memory /* performData */) {\\n        for (uint256 i = 0; i < users.length; i++) {\\n            if (condition[users[i]]) {\\n                upkeepNeeded = true;\\n                break;\\n            }\\n        }\\n    }\\n\\n    function performUpkeep(bytes calldata /* performData */) external override {\\n        for (uint256 i = 0; i < users.length; i++) {\\n            address user = users[i];\\n            if (condition[user]) {\\n                uint256 amount = swapAmounts[user];\\n                if (amount > 0) {\\n                    swapTokens(user, amount);\\n                }\\n                condition[user] = false;\\n            }\\n        }\\n    }\\n\\n    function swapTokens(address user, uint256 amount) internal {\\n        (bool success, ) = swapContractAddress.call(\\n            abi.encodeWithSignature(\\\"swap(uint256)\\\", amount)\\n        );\\n        require(success, \\\"Swap failed\\\");\\n        emit TokensSwapped(user, amount);\\n    }\\n\\n    function reset() external {\\n        // Only for demonstration purposes; in a real scenario, proper access control is needed.\\n        for (uint256 i = 0; i < users.length; i++) {\\n            address user = users[i];\\n            condition[user] = false;\\n            swapAmounts[user] = 0;\\n        }\\n        delete users;\\n    }\\n}\\n\",\"keccak256\":\"0xbe9c86a009f3b9b7f59e4ec5ee4c98bdf2fbacf0a48bf07617f34dcf0f958b2c\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161082038038061082083398101604081905261002f91610054565b600380546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b61078d806100936000396000f3fe608060405234801561001057600080fd5b50600436106100935760003560e01c80636e04ff0d116100665780636e04ff0d1461011e5780638ac51b731461013f578063d2933acd14610178578063d3017193146101ab578063d826f88f146101be57600080fd5b8063365b98b214610098578063442bbad6146100c85780634585e33b146100f65780635680bab71461010b575b600080fd5b6100ab6100a636600461056f565b6101c6565b6040516001600160a01b0390911681526020015b60405180910390f35b6100e86100d63660046105a4565b60016020526000908152604090205481565b6040519081526020016100bf565b6101096101043660046105c6565b6101f0565b005b6003546100ab906001600160a01b031681565b61013161012c3660046105c6565b6102a4565b6040516100bf92919061065c565b61010961014d366004610698565b6001600160a01b03919091166000908152602081905260409020805460ff1916911515919091179055565b61019b6101863660046105a4565b60006020819052908152604090205460ff1681565b60405190151581526020016100bf565b6101096101b93660046106d4565b61031b565b6101096103a2565b600281815481106101d657600080fd5b6000918252602090912001546001600160a01b0316905081565b60005b60025481101561029f57600060028281548110610212576102126106fe565b60009182526020808320909101546001600160a01b03168083529082905260409091205490915060ff161561028c576001600160a01b038116600090815260016020526040902054801561026a5761026a8282610417565b506001600160a01b0381166000908152602081905260409020805460ff191690555b508061029781610714565b9150506101f3565b505050565b6000606060005b60025481101561031357600080600283815481106102cb576102cb6106fe565b60009182526020808320909101546001600160a01b0316835282019290925260400190205460ff16156103015760019250610313565b8061030b81610714565b9150506102ab565b509250929050565b6001600160a01b038216600090815260016020526040812054900361038657600280546001810182556000919091527f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace0180546001600160a01b0319166001600160a01b0384161790555b6001600160a01b03909116600090815260016020526040902055565b60005b600254811015610408576000600282815481106103c4576103c46106fe565b60009182526020808320909101546001600160a01b031682528181526040808320805460ff191690556001909152812055508061040081610714565b9150506103a5565b5061041560026000610535565b565b600354604051602481018390526000916001600160a01b03169060440160408051601f198184030181529181526020820180516001600160e01b0316634a5c8c6f60e11b17905251610469919061073b565b6000604051808303816000865af19150503d80600081146104a6576040519150601f19603f3d011682016040523d82523d6000602084013e6104ab565b606091505b50509050806104ee5760405162461bcd60e51b815260206004820152600b60248201526a14ddd85c0819985a5b195960aa1b604482015260640160405180910390fd5b604080516001600160a01b0385168152602081018490527f560c2d01b390b6779e2d10c443fb354f5ce2ec169ef6617c3bb2208938f82dc9910160405180910390a1505050565b50805460008255906000526020600020908101906105539190610556565b50565b5b8082111561056b5760008155600101610557565b5090565b60006020828403121561058157600080fd5b5035919050565b80356001600160a01b038116811461059f57600080fd5b919050565b6000602082840312156105b657600080fd5b6105bf82610588565b9392505050565b600080602083850312156105d957600080fd5b823567ffffffffffffffff808211156105f157600080fd5b818501915085601f83011261060557600080fd5b81358181111561061457600080fd5b86602082850101111561062657600080fd5b60209290920196919550909350505050565b60005b8381101561065357818101518382015260200161063b565b50506000910152565b82151581526040602082015260008251806040840152610683816060850160208701610638565b601f01601f1916919091016060019392505050565b600080604083850312156106ab57600080fd5b6106b483610588565b9150602083013580151581146106c957600080fd5b809150509250929050565b600080604083850312156106e757600080fd5b6106f083610588565b946020939093013593505050565b634e487b7160e01b600052603260045260246000fd5b60006001820161073457634e487b7160e01b600052601160045260246000fd5b5060010190565b6000825161074d818460208701610638565b919091019291505056fea2646970667358221220ba27aaec689b408d82a4240e47207e66ca2d8cd2a26a9147f1f0422d88ea36de64736f6c63430008130033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100935760003560e01c80636e04ff0d116100665780636e04ff0d1461011e5780638ac51b731461013f578063d2933acd14610178578063d3017193146101ab578063d826f88f146101be57600080fd5b8063365b98b214610098578063442bbad6146100c85780634585e33b146100f65780635680bab71461010b575b600080fd5b6100ab6100a636600461056f565b6101c6565b6040516001600160a01b0390911681526020015b60405180910390f35b6100e86100d63660046105a4565b60016020526000908152604090205481565b6040519081526020016100bf565b6101096101043660046105c6565b6101f0565b005b6003546100ab906001600160a01b031681565b61013161012c3660046105c6565b6102a4565b6040516100bf92919061065c565b61010961014d366004610698565b6001600160a01b03919091166000908152602081905260409020805460ff1916911515919091179055565b61019b6101863660046105a4565b60006020819052908152604090205460ff1681565b60405190151581526020016100bf565b6101096101b93660046106d4565b61031b565b6101096103a2565b600281815481106101d657600080fd5b6000918252602090912001546001600160a01b0316905081565b60005b60025481101561029f57600060028281548110610212576102126106fe565b60009182526020808320909101546001600160a01b03168083529082905260409091205490915060ff161561028c576001600160a01b038116600090815260016020526040902054801561026a5761026a8282610417565b506001600160a01b0381166000908152602081905260409020805460ff191690555b508061029781610714565b9150506101f3565b505050565b6000606060005b60025481101561031357600080600283815481106102cb576102cb6106fe565b60009182526020808320909101546001600160a01b0316835282019290925260400190205460ff16156103015760019250610313565b8061030b81610714565b9150506102ab565b509250929050565b6001600160a01b038216600090815260016020526040812054900361038657600280546001810182556000919091527f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace0180546001600160a01b0319166001600160a01b0384161790555b6001600160a01b03909116600090815260016020526040902055565b60005b600254811015610408576000600282815481106103c4576103c46106fe565b60009182526020808320909101546001600160a01b031682528181526040808320805460ff191690556001909152812055508061040081610714565b9150506103a5565b5061041560026000610535565b565b600354604051602481018390526000916001600160a01b03169060440160408051601f198184030181529181526020820180516001600160e01b0316634a5c8c6f60e11b17905251610469919061073b565b6000604051808303816000865af19150503d80600081146104a6576040519150601f19603f3d011682016040523d82523d6000602084013e6104ab565b606091505b50509050806104ee5760405162461bcd60e51b815260206004820152600b60248201526a14ddd85c0819985a5b195960aa1b604482015260640160405180910390fd5b604080516001600160a01b0385168152602081018490527f560c2d01b390b6779e2d10c443fb354f5ce2ec169ef6617c3bb2208938f82dc9910160405180910390a1505050565b50805460008255906000526020600020908101906105539190610556565b50565b5b8082111561056b5760008155600101610557565b5090565b60006020828403121561058157600080fd5b5035919050565b80356001600160a01b038116811461059f57600080fd5b919050565b6000602082840312156105b657600080fd5b6105bf82610588565b9392505050565b600080602083850312156105d957600080fd5b823567ffffffffffffffff808211156105f157600080fd5b818501915085601f83011261060557600080fd5b81358181111561061457600080fd5b86602082850101111561062657600080fd5b60209290920196919550909350505050565b60005b8381101561065357818101518382015260200161063b565b50506000910152565b82151581526040602082015260008251806040840152610683816060850160208701610638565b601f01601f1916919091016060019392505050565b600080604083850312156106ab57600080fd5b6106b483610588565b9150602083013580151581146106c957600080fd5b809150509250929050565b600080604083850312156106e757600080fd5b6106f083610588565b946020939093013593505050565b634e487b7160e01b600052603260045260246000fd5b60006001820161073457634e487b7160e01b600052601160045260246000fd5b5060010190565b6000825161074d818460208701610638565b919091019291505056fea2646970667358221220ba27aaec689b408d82a4240e47207e66ca2d8cd2a26a9147f1f0422d88ea36de64736f6c63430008130033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 77,
+        "contract": "contracts/Automation.sol:Automation",
+        "label": "condition",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 81,
+        "contract": "contracts/Automation.sol:Automation",
+        "label": "swapAmounts",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 84,
+        "contract": "contracts/Automation.sol:Automation",
+        "label": "users",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_array(t_address)dyn_storage"
+      },
+      {
+        "astId": 86,
+        "contract": "contracts/Automation.sol:Automation",
+        "label": "swapContractAddress",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
